@@ -1,0 +1,48 @@
+.heading{
+    color: purple;
+}
+
+.mandatory
+{
+    color: red;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    
+    gap: 20px;
+}
+.header-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+.other-container{
+  display: flex;
+  flex-direction: column;
+  
+  margin-top: 20px;
+}
+h1, h2 {
+    margin: 0;
+}
+
+.input-group input {
+    flex: 1;
+}
+
+.spacing{
+    margin-left: 25px;
+}
+
+.theight{
+    font-size: 10px;
+}
+.form-container{
+    margin-top: 20px;
+}
+
+.whole
+{
+    padding-left: 400px;
+}
