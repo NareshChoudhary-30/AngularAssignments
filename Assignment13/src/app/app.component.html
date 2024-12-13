@@ -1,0 +1,68 @@
+<div class = "content-container">
+
+  <div class="header-container">
+    <div>
+        <h1 class = "heading" style = "padding-left: 60px;">Contact Our</h1>
+        <h2>Customer Support Center</h2>
+    </div>
+    <img src="laptop3.jpg" alt="Laptop3">
+  </div> 
+
+  <div class = "other-container">
+    <h3 style = "padding-left: 110px;">Contact Information</h3>
+    <p style = "padding-left: 70px;">Please fill out your contact information below.</p>
+  </div>
+
+
+
+  <form [formGroup] = "MarvellousForm" class="row g-3" style="width: 600px;">
+    <div class="col-md-6">
+      <label class="form-label">First Name<span class="mandatory">*</span></label>
+      <input [class.is-invalid] = "MarvellousForm.get('firstname')?.invalid && MarvellousForm.get('firstname')?.touched" type="text" class="form-control" formControlName="firstname">
+      <small [class.d-none]="MarvellousForm.get('firstname')?.valid || MarvellousForm.get('firstname')?.untouched" class="text-danger">It should contaion only alphabets</small>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Last Name</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-md-12">
+      <label class="form-label">Email<span class="mandatory">*</span></label>
+      <input [class.is-invalid] = "MarvellousForm.get('email')?.invalid && MarvellousForm.get('email')?.touched" type="email" class="form-control" formControlName="email">
+      <small [class.d-none]="MarvellousForm.get('email')?.valid || MarvellousForm.get('email')?.untouched" class="text-danger">It should contain minimum 1 character after "&#64;"  and 2 after .</small>
+    </div>
+    <div class="col-md-12">
+      <label class="form-label">Phone<span class="mandatory">*</span></label>
+      <input [class.is-invalid] = "MarvellousForm.get('phone')?.invalid && MarvellousForm.get('phone')?.touched" type="text" class="form-control" formControlName = "phone">
+      <small [class.d-none]="MarvellousForm.get('phone')?.valid || MarvellousForm.get('phone')?.untouched" class="text-danger">It should contain only numbers</small>
+    </div>
+    <div class="col-md-12">
+      <label class="form-label">Address Line 1</label>
+      <input type="email" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">State</label>
+      <select id="inputstate" class="form-select">
+        <option selected>Maharashtra</option>
+        <option>Gujrat</option>
+        <option>Uttar Pradesh</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">City<span class="mandatory">*</span></label>
+      <input [class.is-invalid] = "MarvellousForm.get('city')?.invalid && MarvellousForm.get('city')?.touched" type="text" class="form-control" formControlName="city">
+      <small [class.d-none]="MarvellousForm.get('city')?.valid || MarvellousForm.get('city')?.untouched" class="text-danger">It should contaion minimum 4 alphabets</small>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Zip Code</label>
+      <input [class.is-invalid] = "MarvellousForm.get('zip')?.invalid && MarvellousForm.get('zip')?.touched" type="text" class="form-control" formControlName="zip">
+      <small [class.d-none]="MarvellousForm.get('zip')?.valid || MarvellousForm.get('zip')?.untouched" class="text-danger">Length of Zip code should be 5</small>
+    </div>
+    <div class="col-md-12">
+      <label class="form-label">Comments</label>
+      <input [class.is-invalid] = "MarvellousForm.get('comment')?.invalid && MarvellousForm.get('comment')?.touched" type="text" class="form-control" formControlName="comment">
+      <small [class.d-none]="MarvellousForm.get('comment')?.valid || MarvellousForm.get('comment')?.untouched" class="text-danger">Minimum 30 characters</small>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled] = "MarvellousForm.invalid">Submit</button>
+  </form>
+
+</div>
