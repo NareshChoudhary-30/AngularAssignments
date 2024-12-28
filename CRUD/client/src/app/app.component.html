@@ -1,0 +1,62 @@
+<h1>FULL Stack Demonstration</h1>
+
+<button (click)="fetchData()">Read</button>
+
+<p *ngIf = "message">
+  {{message | json}}
+</p>
+
+<h2>Add New Batch</h2>
+<div>
+  <label>
+    Name:
+    <input [(ngModel)]="newBatch.Name" placeholder="Batch Name">
+  </label>
+  <br>
+  <label>
+    Fees:
+    <input [(ngModel)]="newBatch.Fees" placeholder="Batch Fees">
+  </label>
+  <br>
+  <label>
+    Duration:
+    <input [(ngModel)]="newBatch.Duration" placeholder="Batch Duration">
+  </label>
+  <br>
+  <button (click)="createRecord()">Add Batch</button>
+</div>
+
+<h2>Delete Batch</h2>
+<div>
+  <label>
+    Batch ID:
+    <input [(ngModel)]="deleteId" placeholder="Enter Batch ID">
+  </label>
+  <br>
+  <button (click)="deleteRecord()">Delete Batch</button>
+</div>
+
+<h2>Update Batch</h2>
+<div>
+  <label>
+    Batch ID:
+    <input [(ngModel)]="updateBatch.id" placeholder="Enter Batch ID">
+  </label>
+  <br>
+  <label>
+    Name:
+    <input [(ngModel)]="updateBatch.Name" placeholder="Updated Name">
+  </label>
+  <br>
+  <label>
+    Fees:
+    <input [(ngModel)]="updateBatch.Fees" placeholder="Updated Fees">
+  </label>
+  <br>
+  <label>
+    Duration:
+    <input [(ngModel)]="updateBatch.Duration" placeholder="Updated Duration">
+  </label>
+  <br>
+  <button (click)="updateRecord()">Update Batch</button>
+</div>
